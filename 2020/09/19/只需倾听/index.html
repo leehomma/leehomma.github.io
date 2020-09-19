@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/img/cowboy.png">
+  <title>leehomma的博客</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/img/cowboy.png">
+      
+      <span class="navbar-logo-dsc">leehomma的博客</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      只需倾听
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2020-09-19T12:24:03.206Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2020-09-19</span>
+    </time>
+    
+    
+    <span class="dot"></span>
+    <span>990 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/沟通/" class="post-meta-link">沟通</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <h2 id="一、2个沟通奥秘"><a href="#一、2个沟通奥秘" class="headerlink" title="一、2个沟通奥秘"></a>一、2个沟通奥秘</h2><h3 id="（一）谁劫持了你"><a href="#（一）谁劫持了你" class="headerlink" title="（一）谁劫持了你"></a>（一）谁劫持了你</h3><p>​      牵引力：</p>
+<p>低速档：倾听、提问、体察映照</p>
+<p>高速档：说服、鼓励、争论、敦促</p>
+<p>​          说服过程：从拒绝到肯听你说话；从肯听你说话到考虑你的话（此前两步为接纳过程）；从考虑你的话到愿意照着做；从愿意照着做到真的去做；从真的去做到愉快的去做，然后继续下去</p>
+<p>​      如何进入接纳过程：正确措辞</p>
+<h3 id="（二）大脑工作方式"><a href="#（二）大脑工作方式" class="headerlink" title="（二）大脑工作方式"></a>（二）大脑工作方式</h3><h4 id="分成三部分的大脑"><a href="#分成三部分的大脑" class="headerlink" title="分成三部分的大脑"></a>分成三部分的大脑</h4><ul>
+<li>底层：爬虫脑：负责行动、反应，没有多少思考成分</li>
+<li>中层：哺乳动物脑：情绪基地</li>
+<li>外层：灵长动物脑：辩证分析局势，得出行动计划，从底层和中层获取数据，筛选分析，形成决定</li>
+</ul>
+<p>​        三层的关系像年轮，新的覆盖旧的，偶尔互相协作，大部分各自为政</p>
+<p>​        如何应用：和对方的第三层对话，将对话从底层升级到外层</p>
+<p>（《畅销的原理》中提到这种三重脑理论落伍了，待阅）</p>
+<h4 id="杏仁核劫持"><a href="#杏仁核劫持" class="headerlink" title="杏仁核劫持"></a>杏仁核劫持</h4><p>​        杏仁核的作用：察觉威胁时快速行动</p>
+<p>​        额叶的作用：禁闭岛、马男波杰克里都有涉及额叶切除手术，负责逻辑思考</p>
+<p>​        两者关系：察觉威胁时，如果不是特别恐慌，高级脑区依旧能工作，但特别惊恐时杏仁核会关闭高级脑区，按直觉行动，即杏仁核劫持：丹尼尔戈尔曼提出，表现为杏仁核掌控，额叶不起作用</p>
+<h4 id="镜像神经元"><a href="#镜像神经元" class="headerlink" title="镜像神经元"></a>镜像神经元</h4><p>​        人类同理心的基础，映照对方感受的神经元。</p>
+<h2 id="二、9条核心沟通法则"><a href="#二、9条核心沟通法则" class="headerlink" title="二、9条核心沟通法则"></a>二、9条核心沟通法则</h2><h4 id="短时间内控制自己"><a href="#短时间内控制自己" class="headerlink" title="短时间内控制自己"></a>短时间内控制自己</h4><p>Q:危机和压力中我们在想什么，会经历怎样的过程？</p>
+<p>A:产生反应，情绪释放，恢复冷静，打起精神，重振旗鼓</p>
+<p>当我在这样做的时候，别人也是一样，怎么帮助别人也这样做</p>
+<p>Q:如何将大脑从恐慌调到理性</p>
+<p>A:说出自己的情绪，会让人冷静下来，不要对自己撒谎</p>
+<h4 id="清空成见，开始倾听"><a href="#清空成见，开始倾听" class="headerlink" title="清空成见，开始倾听"></a>清空成见，开始倾听</h4><p>我们对他人的感知和判断里有事实，虚构，偏见</p>
+<p>我们是如何感知和判断的：过滤器，将人分类，这是有用的，经验和直觉形成的判断，但有时也会阻止发现真相</p>
+<p>我们怎样清空成见：仔细分析想法，与现实情况比较</p>
+<h4 id="让对方感觉到自己的理解"><a href="#让对方感觉到自己的理解" class="headerlink" title="让对方感觉到自己的理解"></a>让对方感觉到自己的理解</h4><p>How:将心比心，站在对方立场</p>
+<p>Why:镜像神经元</p>
+<h4 id="对别人感兴趣，而不是证明自己有趣"><a href="#对别人感兴趣，而不是证明自己有趣" class="headerlink" title="对别人感兴趣，而不是证明自己有趣"></a>对别人感兴趣，而不是证明自己有趣</h4><p>减少对方的镜像神经元接受匮乏</p>
+<h4 id="让别人感到自己有价值"><a href="#让别人感到自己有价值" class="headerlink" title="让别人感到自己有价值"></a>让别人感到自己有价值</h4><p>让镜像神经元接受匮乏的人觉得自己重要，例如爱抱怨、吹毛求疵、喜欢碍事的人</p>
+<h4 id="帮助他抒发郁结"><a href="#帮助他抒发郁结" class="headerlink" title="帮助他抒发郁结"></a>帮助他抒发郁结</h4><p>提问让对方发泄情绪，别争论，为自己辩护，对方发泄完后，要区分精疲力尽和放松，如果对方精疲力尽，那这时他是空虚和疲惫的，听不进别人的话，这时还不是和他交谈的时候，可以引导他继续说话</p>
+<p>听之任之，顺其自然。别打断这个过程，提供解决方法，或者试图让事情好转</p>
+<h4 id="消除错位现象"><a href="#消除错位现象" class="headerlink" title="消除错位现象"></a>消除错位现象</h4><p>什么是错位：自己对自己的认知和他人对自己的不一致，或是反过来</p>
+<p>有什么后果：阻止建立同理心</p>
+<p>how:前馈：选出最需要改正的行为，找人给自己提建议，未来应该如何做；预先说出自己的情况</p>
+<h4 id="主动示弱"><a href="#主动示弱" class="headerlink" title="主动示弱"></a>主动示弱</h4><h4 id="远离有毒的人"><a href="#远离有毒的人" class="headerlink" title="远离有毒的人"></a>远离有毒的人</h4><p>how: 正面交手，化解招数，远离</p>
+<p>有哪些人有毒：贪婪，恃强凌弱，爱占便宜，自恋，精神病患者，etc</p>
+<p>检视自己是不是有问题</p>
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://leehomma.me/about">leehomma</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://leehomma.me/2020/09/19/%E5%8F%AA%E9%9C%80%E5%80%BE%E5%90%AC/">http://leehomma.me/2020/09/19/%E5%8F%AA%E9%9C%80%E5%80%BE%E5%90%AC/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  <div class="nav-item-prev">
+    <a href="/2020/09/19/问题解决/" class="nav-link">
+      <i class="iconfont icon-left nav-prev-icon"></i>
+      <div>
+        <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">问题解决 </div>
+        
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="nav-item-next">
+    <a href="/2020/09/19/超市里的原始人/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">超市里的原始人 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%812%E4%B8%AA%E6%B2%9F%E9%80%9A%E5%A5%A5%E7%A7%98"><span class="toc-text">一、2个沟通奥秘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E8%B0%81%E5%8A%AB%E6%8C%81%E4%BA%86%E4%BD%A0"><span class="toc-text">（一）谁劫持了你</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%A4%A7%E8%84%91%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-text">（二）大脑工作方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%88%90%E4%B8%89%E9%83%A8%E5%88%86%E7%9A%84%E5%A4%A7%E8%84%91"><span class="toc-text">分成三部分的大脑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%8F%E4%BB%81%E6%A0%B8%E5%8A%AB%E6%8C%81"><span class="toc-text">杏仁核劫持</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E7%A5%9E%E7%BB%8F%E5%85%83"><span class="toc-text">镜像神经元</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%819%E6%9D%A1%E6%A0%B8%E5%BF%83%E6%B2%9F%E9%80%9A%E6%B3%95%E5%88%99"><span class="toc-text">二、9条核心沟通法则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E6%97%B6%E9%97%B4%E5%86%85%E6%8E%A7%E5%88%B6%E8%87%AA%E5%B7%B1"><span class="toc-text">短时间内控制自己</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E7%A9%BA%E6%88%90%E8%A7%81%EF%BC%8C%E5%BC%80%E5%A7%8B%E5%80%BE%E5%90%AC"><span class="toc-text">清空成见，开始倾听</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A9%E5%AF%B9%E6%96%B9%E6%84%9F%E8%A7%89%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">让对方感觉到自己的理解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%85%B4%E8%B6%A3%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AF%81%E6%98%8E%E8%87%AA%E5%B7%B1%E6%9C%89%E8%B6%A3"><span class="toc-text">对别人感兴趣，而不是证明自己有趣</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%88%B0%E8%87%AA%E5%B7%B1%E6%9C%89%E4%BB%B7%E5%80%BC"><span class="toc-text">让别人感到自己有价值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E4%BB%96%E6%8A%92%E5%8F%91%E9%83%81%E7%BB%93"><span class="toc-text">帮助他抒发郁结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B6%88%E9%99%A4%E9%94%99%E4%BD%8D%E7%8E%B0%E8%B1%A1"><span class="toc-text">消除错位现象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E5%8A%A8%E7%A4%BA%E5%BC%B1"><span class="toc-text">主动示弱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A6%BB%E6%9C%89%E6%AF%92%E7%9A%84%E4%BA%BA"><span class="toc-text">远离有毒的人</span></a></li></ol></li></ol></li></ol>
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/img/cowboy.png" class="author-img">
+
+<p class="author-name">leehomma</p>
+<p class="author-description">cool and fun</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>5</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>0</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>4</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%812%E4%B8%AA%E6%B2%9F%E9%80%9A%E5%A5%A5%E7%A7%98"><span class="toc-text">一、2个沟通奥秘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E8%B0%81%E5%8A%AB%E6%8C%81%E4%BA%86%E4%BD%A0"><span class="toc-text">（一）谁劫持了你</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%A4%A7%E8%84%91%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-text">（二）大脑工作方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%88%90%E4%B8%89%E9%83%A8%E5%88%86%E7%9A%84%E5%A4%A7%E8%84%91"><span class="toc-text">分成三部分的大脑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%8F%E4%BB%81%E6%A0%B8%E5%8A%AB%E6%8C%81"><span class="toc-text">杏仁核劫持</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E7%A5%9E%E7%BB%8F%E5%85%83"><span class="toc-text">镜像神经元</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%819%E6%9D%A1%E6%A0%B8%E5%BF%83%E6%B2%9F%E9%80%9A%E6%B3%95%E5%88%99"><span class="toc-text">二、9条核心沟通法则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E6%97%B6%E9%97%B4%E5%86%85%E6%8E%A7%E5%88%B6%E8%87%AA%E5%B7%B1"><span class="toc-text">短时间内控制自己</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E7%A9%BA%E6%88%90%E8%A7%81%EF%BC%8C%E5%BC%80%E5%A7%8B%E5%80%BE%E5%90%AC"><span class="toc-text">清空成见，开始倾听</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A9%E5%AF%B9%E6%96%B9%E6%84%9F%E8%A7%89%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">让对方感觉到自己的理解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%85%B4%E8%B6%A3%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AF%81%E6%98%8E%E8%87%AA%E5%B7%B1%E6%9C%89%E8%B6%A3"><span class="toc-text">对别人感兴趣，而不是证明自己有趣</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%88%B0%E8%87%AA%E5%B7%B1%E6%9C%89%E4%BB%B7%E5%80%BC"><span class="toc-text">让别人感到自己有价值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E4%BB%96%E6%8A%92%E5%8F%91%E9%83%81%E7%BB%93"><span class="toc-text">帮助他抒发郁结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B6%88%E9%99%A4%E9%94%99%E4%BD%8D%E7%8E%B0%E8%B1%A1"><span class="toc-text">消除错位现象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E5%8A%A8%E7%A4%BA%E5%BC%B1"><span class="toc-text">主动示弱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A6%BB%E6%9C%89%E6%AF%92%E7%9A%84%E4%BA%BA"><span class="toc-text">远离有毒的人</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\问题解决" title="问题解决"><div class="tags-list-item">问题解决</div></a>
+    
+    <a href="\tags\运营" title="运营"><div class="tags-list-item">运营</div></a>
+    
+    <a href="\tags\money" title="money"><div class="tags-list-item">money</div></a>
+    
+    <a href="\tags\沟通" title="沟通"><div class="tags-list-item">沟通</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%812%E4%B8%AA%E6%B2%9F%E9%80%9A%E5%A5%A5%E7%A7%98"><span class="toc-text">一、2个沟通奥秘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E8%B0%81%E5%8A%AB%E6%8C%81%E4%BA%86%E4%BD%A0"><span class="toc-text">（一）谁劫持了你</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%A4%A7%E8%84%91%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-text">（二）大脑工作方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%88%90%E4%B8%89%E9%83%A8%E5%88%86%E7%9A%84%E5%A4%A7%E8%84%91"><span class="toc-text">分成三部分的大脑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%8F%E4%BB%81%E6%A0%B8%E5%8A%AB%E6%8C%81"><span class="toc-text">杏仁核劫持</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E7%A5%9E%E7%BB%8F%E5%85%83"><span class="toc-text">镜像神经元</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%819%E6%9D%A1%E6%A0%B8%E5%BF%83%E6%B2%9F%E9%80%9A%E6%B3%95%E5%88%99"><span class="toc-text">二、9条核心沟通法则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E6%97%B6%E9%97%B4%E5%86%85%E6%8E%A7%E5%88%B6%E8%87%AA%E5%B7%B1"><span class="toc-text">短时间内控制自己</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E7%A9%BA%E6%88%90%E8%A7%81%EF%BC%8C%E5%BC%80%E5%A7%8B%E5%80%BE%E5%90%AC"><span class="toc-text">清空成见，开始倾听</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A9%E5%AF%B9%E6%96%B9%E6%84%9F%E8%A7%89%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">让对方感觉到自己的理解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%85%B4%E8%B6%A3%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AF%81%E6%98%8E%E8%87%AA%E5%B7%B1%E6%9C%89%E8%B6%A3"><span class="toc-text">对别人感兴趣，而不是证明自己有趣</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%88%B0%E8%87%AA%E5%B7%B1%E6%9C%89%E4%BB%B7%E5%80%BC"><span class="toc-text">让别人感到自己有价值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E4%BB%96%E6%8A%92%E5%8F%91%E9%83%81%E7%BB%93"><span class="toc-text">帮助他抒发郁结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B6%88%E9%99%A4%E9%94%99%E4%BD%8D%E7%8E%B0%E8%B1%A1"><span class="toc-text">消除错位现象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E5%8A%A8%E7%A4%BA%E5%BC%B1"><span class="toc-text">主动示弱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A6%BB%E6%9C%89%E6%AF%92%E7%9A%84%E4%BA%BA"><span class="toc-text">远离有毒的人</span></a></li></ol></li></ol></li></ol>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-09-19</div>
+        <a href="/2020/09/19/一枚硬币的智慧/"><div class="recent-posts-item-content">一枚硬币的智慧</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-09-19</div>
+        <a href="/2020/09/19/运营之光/"><div class="recent-posts-item-content">运营之光</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-09-19</div>
+        <a href="/2020/09/19/问题解决/"><div class="recent-posts-item-content">问题解决</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-09-19</div>
+        <a href="/2020/09/19/只需倾听/"><div class="recent-posts-item-content">只需倾听</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2020
+        </span>
+        <a href="/" class="footer-link">leehomma的博客 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>
