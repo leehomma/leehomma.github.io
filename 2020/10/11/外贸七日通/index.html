@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/img/cowboy.png">
+  <title>leehomma的博客</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/img/cowboy.png">
+      
+      <span class="navbar-logo-dsc">leehomma的博客</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      外贸七日通
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2020-10-11T07:49:25.753Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2020-10-11</span>
+    </time>
+    
+    <span class="dot"></span>
+    
+    <a href="/categories/读书笔记/" class="post-meta-link">读书笔记</a>
+    
+    
+    
+    <span class="dot"></span>
+    <span>7.4k 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/外贸/" class="post-meta-link">外贸</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <p>外贸七日通</p>
+<p>七日，是圣经里的上帝七日创世</p>
+<h1 id="三句话"><a href="#三句话" class="headerlink" title="三句话"></a>三句话</h1><ol>
+<li><p>做生意本质始终没变:买进卖出商品,赚取差价。只不过随着规模的扩大,增加些手续和管理机构而已。 外贸生意做得越大 , 手续和牵涉到的管理机构会逐渐增加 </p>
+</li>
+<li><p>外贸无小事,事事要当心 </p>
+</li>
+<li><p>了解外贸知识简单，了解产品难。关于外贸的教材也很多,本书就是一例,耐心看看,几天工夫就能大致上手操作。而要了解一种产品,则是冰冻三尺非一日寒了,很多专业的知识和技能,非深入一线生产不可得知</p>
+</li>
+<li><p>明白外贸原理，则可灵活操作而变不离宗；积累江湖经验，方能雾里看花而方寸不乱</p>
+</li>
+</ol>
+<h1 id="第-1-日-入门篇：从零开始-四步教你上手做外贸"><a href="#第-1-日-入门篇：从零开始-四步教你上手做外贸" class="headerlink" title="第 1 日 入门篇：从零开始,四步教你上手做外贸"></a>第 1 日 入门篇：从零开始,四步教你上手做外贸</h1><h2 id="一、外贸第一步-外贸经营权"><a href="#一、外贸第一步-外贸经营权" class="headerlink" title="一、外贸第一步:外贸经营权"></a>一、外贸第一步:外贸经营权</h2><p>自营进出口权、代理出口、挂靠、个体工商户外贸备案四招 </p>
+<p>1.取得进出口权:只有拥有进出口权的企业和个人才能直接经营进出口业务。 </p>
+<p>2.准备货源:自己生产或从国内采购。</p>
+<p>3.商品检验:正规出口的产品,很多都需要接受强制质量检验,向国家进出口商品检验检疫局申报检验以取得出口许可。</p>
+<p>4.申报出口:向出口地的海关申报出口,简称报关。</p>
+<p>5.办理国际运输:委托国际运输公司将货物运往国外。</p>
+<p>6.通过银行收取国外客户支付的货款—-一般是美金。</p>
+<p>7.向外汇管理局申报:国家外汇管制规定,营业外汇收支需向外汇管理局申报审核。</p>
+<p>8.向税务机关申报:国家税务局对外贸交易相关税务进行监管,并相应调整某些税种 </p>
+<h2 id="二、外贸第二步-选择受欢迎的经销产品"><a href="#二、外贸第二步-选择受欢迎的经销产品" class="headerlink" title="二、外贸第二步:选择受欢迎的经销产品"></a>二、外贸第二步:选择受欢迎的经销产品</h2><h3 id="三个误区"><a href="#三个误区" class="headerlink" title="三个误区"></a>三个误区</h3><p>1.品质越高越好 </p>
+<p>2。价格越低越有竞争力 </p>
+<p>3.关心产品是否属于朝阳产业 </p>
+<p>排除对高品质、超低价、新潮朝阳产业等的迷信,心态就平和了,对产品的选择面也可以更广了。那么</p>
+<h3 id="如何选择产品呢"><a href="#如何选择产品呢" class="headerlink" title="如何选择产品呢?"></a>如何选择产品呢?</h3><ol>
+<li>本身就是生产厂家的, </li>
+<li>受雇于一家外贸公司的新手业务员 </li>
+<li>普通的贸易公司希望发展国外市场 </li>
+<li>个人从事外贸的。 </li>
+</ol>
+<h3 id="经验漫谈"><a href="#经验漫谈" class="headerlink" title="经验漫谈"></a>经验漫谈</h3><p>(1)外贸产品的品质不是一成不变的。即使同一类产品,销往不同国家,品质大不相同。外贸业务员要学会通过调整品质来调整成本,适应不同国家市场,从而取得价格上的竞争优势。 </p>
+<p>(2)不同的市场, 对同类产品有各自的偏好。 外贸业务员选择经销产品的时候应有的放矢。 因此, 了解一点世界地理知识、风俗习惯和历史沿革,就能投其所好,少走弯路。 </p>
+<p>(3)从消费习惯来看, 可大致分为美加(美国和加拿大) 市场、 欧洲市场、 日韩市场、 东欧市场、中东市场、非洲市场这几类。具体到每个客户固然各有所好、风格不 同 </p>
+<p>(4)因为外贸产品在品质、功效和外观上的多变性,因此,选择什么样的经销产品,更多的考虑应从业务员对产品变化去做调整, 能够有效控制成本的产品。 本身是工厂最好, 否则至少也要有若干工厂愿意配合。单纯被动地去推销现成产品是很难有发展前景的, </p>
+<p>(5)关于外贸的教材也很多,本书就是一例,耐心看看,几天工夫就能大致上手操作。而要了解一种产品,则是冰冻三尺非一日寒了,很多专业的知识和技能,非深入一线生产不可得知。</p>
+<p>所以说,选择工厂比选择产品更重要的多,也是外贸的成功关键之一,选择什么样的经销产品,应以工厂配合程度而定 </p>
+<h2 id="三、外贸第三步-破解外贸的三个关键秘密"><a href="#三、外贸第三步-破解外贸的三个关键秘密" class="headerlink" title="三、外贸第三步:破解外贸的三个关键秘密"></a>三、外贸第三步:破解外贸的三个关键秘密</h2><p>解决了出口权限,选定了经销产品,接下来就是销售渠道的问题了。那么,外贸是如何做的呢?与普通的国内贸易相比,到底有什么不同？</p>
+<h3 id="外贸特点：风险大"><a href="#外贸特点：风险大" class="headerlink" title="外贸特点：风险大"></a>外贸特点：风险大</h3><p>外贸有双方不见面, 交货和收钱的周期长, 路途遥远, 量大金额高、 中间环节多等特点, 风险比较大,一旦出问题损失也大。为此,几百年来国际贸易 行业也相应地制定了贸易惯例与协定,包括货物的国际通行质量标准,价格计算,买卖双方责任与权力等, 以期最大程度地保障贸易秩序。同时,银行业、国际货运 业、保险业等也有非常成熟完善的协同操作。但还存在一个重要的问题—-大批量货物的运输和仓储费用不菲。从工厂出运到客户收货,中间牵涉的环节很多,货主不可能从头到尾监督保管。 最好办法,就是简化实物转运的过 程,让货物只经过工厂—-装货码头仓库—-卸货码头仓库—-客户这四道环节。于是,演化出了最优化、最高效,同时也是外贸最大的关键点:单证交易 </p>
+<h3 id="三个关键秘密-单证交易、-退税制度和信用证结算"><a href="#三个关键秘密-单证交易、-退税制度和信用证结算" class="headerlink" title="三个关键秘密:单证交易、 退税制度和信用证结算"></a>三个关键秘密:单证交易、 退税制度和信用证结算</h3><p>外贸关键秘密之一:单证交易 </p>
+<p>外贸关键秘密之二:退税制度 </p>
+<p>外贸关键秘密之三:信用证交易</p>
+<h3 id="标准的出口操作案例流程"><a href="#标准的出口操作案例流程" class="headerlink" title="标准的出口操作案例流程"></a>标准的出口操作案例流程</h3><p>寻找客户—-签订合同—-客户开出信用证—-根据信用证备货—-货物办理商检、 报关后交付货物运输公司并取得提单—-根据信用证备齐 全套单据—-单据交付国外银行, 国外银行审核无误后拨付货款至国内银行—-根据国内银行的收款凭证至外汇管理局办理核销—-至税务局办理退税 —-结束 </p>
+<h1 id="第-2-日-进阶篇：网商时代-一台电脑通天下"><a href="#第-2-日-进阶篇：网商时代-一台电脑通天下" class="headerlink" title="第 2 日 进阶篇：网商时代,一台电脑通天下"></a>第 2 日 进阶篇：网商时代,一台电脑通天下</h1><h2 id="一、建立一个网站-在互联网上宣传你的产品"><a href="#一、建立一个网站-在互联网上宣传你的产品" class="headerlink" title="一、建立一个网站,在互联网上宣传你的产品"></a>一、建立一个网站,在互联网上宣传你的产品</h2><p>活网站”的四大关键因素: 醒目明确的标题、 实质性内容、被搜索引擎列在比较靠前的位置、稳定且浏览速度快 </p>
+<h2 id="二、登陆-B2B-国际贸易平台-主动出击发布广告"><a href="#二、登陆-B2B-国际贸易平台-主动出击发布广告" class="headerlink" title="二、登陆 B2B 国际贸易平台,主动出击发布广告"></a>二、登陆 B2B 国际贸易平台,主动出击发布广告</h2><h2 id="三、从撒网到钓鱼-在网上直接找客户的四大招数"><a href="#三、从撒网到钓鱼-在网上直接找客户的四大招数" class="headerlink" title="三、从撒网到钓鱼,在网上直接找客户的四大招数"></a>三、从撒网到钓鱼,在网上直接找客户的四大招数</h2><h3 id="第一招-关键词法"><a href="#第一招-关键词法" class="headerlink" title="第一招 关键词法"></a>第一招 关键词法</h3><p>用法之一:选择适当的关键词,直接查找潜在客户发布的求购信息。 </p>
+<p>用法之二:对 B2B 网站中获取的信息做“深加工” </p>
+<h3 id="第二招-逆向法"><a href="#第二招-逆向法" class="headerlink" title="第二招 逆向法"></a>第二招 逆向法</h3><p>反过来向销售产品的客户推销,争取成为其货源 </p>
+<h3 id="第三招-横向法"><a href="#第三招-横向法" class="headerlink" title="第三招 横向法"></a>第三招 横向法</h3><p>横向 地开拓产品外延,争取交易机会 </p>
+<p>横向法还可以直接用于消费客户。比如销售钥匙扣或文具,除了专业买家以外,还可以横向思维寻找可能的用户。比如大型企业或品牌商 家,他们常常会需要一些纪念品或者促销品,类似签字笔、钥匙扣、名片夹等等小产品都是很好的选择 </p>
+<h3 id="第四招-纵向法"><a href="#第四招-纵向法" class="headerlink" title="第四招 纵向法"></a>第四招 纵向法</h3><p>纵向法多用于原材料和半成品的销售。 即了解你的产品的最终用途或深加工用途, 除了专门的原料采购商以外, 寻找那些在网上发布了这些下游产品销售信息的商家, 与之联系。 </p>
+<h2 id="四、开发信—-抛向客户的媚眼"><a href="#四、开发信—-抛向客户的媚眼" class="headerlink" title="四、开发信—-抛向客户的媚眼"></a>四、开发信—-抛向客户的媚眼</h2><h2 id="五、电子邮件战"><a href="#五、电子邮件战" class="headerlink" title="五、电子邮件战"></a>五、电子邮件战</h2><p>对付沉默客户的原则,一是确保不是技术故障,二是保持无重复内容的联系,三是适当寻找突破口,找出客户沉默的原因 </p>
+<h2 id="六、传统的交易会及后期的网上跟进"><a href="#六、传统的交易会及后期的网上跟进" class="headerlink" title="六、传统的交易会及后期的网上跟进"></a>六、传统的交易会及后期的网上跟进</h2><p>如果有机会参加广交会,该注意些什么呢? </p>
+<p>首先,一定要深入了解你的产品,记牢不同的品质与价格—尤其是款式较多的产品类别。 </p>
+<p>当客户对你的产品感兴趣, 表示出采购意向以后, 外贸前期的道路就铺平了, 正式进入技术性工作阶段—-一个关于如何完成外贸出口手续的、需要极其谨慎细致的阶段。因为在这个阶段里 , 充满了外贸行业特定的术语和规则,而每一个的错误都可能导致惨痛的损失。 </p>
+<h1 id="第-3-日-技巧篇：讨价还价-签个漂亮的合同"><a href="#第-3-日-技巧篇：讨价还价-签个漂亮的合同" class="headerlink" title="第 3 日 技巧篇：讨价还价,签个漂亮的合同"></a>第 3 日 技巧篇：讨价还价,签个漂亮的合同</h1><p>外商询问价格, 术语叫做询价 (Inquiry) , 给客户报出个价格, 术语叫做报价(Quote) </p>
+<h2 id="一、让国际买家相信你"><a href="#一、让国际买家相信你" class="headerlink" title="一、让国际买家相信你"></a>一、让国际买家相信你</h2><h2 id="二、外贸商品价格的计算方式"><a href="#二、外贸商品价格的计算方式" class="headerlink" title="二、外贸商品价格的计算方式"></a>二、外贸商品价格的计算方式</h2><p>依据<strong>海港码头作为基准点</strong>的原则,产生了国际贸易特有的计价方式和价格术语: </p>
+<h3 id="（1）运输的手续和费用"><a href="#（1）运输的手续和费用" class="headerlink" title="（1）运输的手续和费用"></a>（1）运输的手续和费用</h3><p>具体说来, 你的产品从出厂到通过集装箱远洋运输交付到国外客户指定的外国海港码头或某个地点,将可能产生下列几种或全部费用: </p>
+<h4 id="1-货物运至中国海港码头出口前的手续和费用"><a href="#1-货物运至中国海港码头出口前的手续和费用" class="headerlink" title="1. 货物运至中国海港码头出口前的手续和费用"></a>1. 货物运至中国海港码头出口前的手续和费用</h4><p>1.产品的出厂价格。</p>
+<p>2.申报进出口商品检验检疫局检验以及出具品质证明的费用,即商检费。</p>
+<p>3.申报中国海关出口的费用,即出口报关费。</p>
+<p>4.租用集装箱装货并运到中国海港码头的费用以及在中国码头产生的各项杂费(在本书第五日教程远洋货运一节还将详述) 。</p>
+<h4 id="2-货物运至外国码头的手续和费用"><a href="#2-货物运至外国码头的手续和费用" class="headerlink" title="2. 货物运至外国码头的手续和费用"></a>2. 货物运至外国码头的手续和费用</h4><p>5.用远洋货轮运至外国海港码头的运费,即海运费。</p>
+<p>6.办理国际货物运输保险的保险费。</p>
+<h4 id="3-货物交到客户手中前的手续和费用"><a href="#3-货物交到客户手中前的手续和费用" class="headerlink" title="3. 货物交到客户手中前的手续和费用"></a>3. 货物交到客户手中前的手续和费用</h4><p>7.集装箱在外国海港码头卸货及其他码头上收取的杂费。</p>
+<p>8.申报外国海关进口的费用,即进口报关费,有时候还需要缴纳进口关税。</p>
+<p>9.货物从外国海港码头运至客户指定地点的费用。</p>
+<h4 id="4-银行收取的经办手续费。"><a href="#4-银行收取的经办手续费。" class="headerlink" title="4. 银行收取的经办手续费。"></a>4. 银行收取的经办手续费。</h4><h3 id="（2）计价方式"><a href="#（2）计价方式" class="headerlink" title="（2）计价方式"></a>（2）计价方式</h3><h4 id="1-FOB-Free-on-Board"><a href="#1-FOB-Free-on-Board" class="headerlink" title="1.FOB(Free on Board)"></a>1.FOB(Free on Board)</h4><p>以出口地港口(Loading Port)为基准点。准确地说,FOB 计价方式的基准点是出口地港口货轮的船舷。货物运抵码头后,需吊装至货轮上,FOB 即以吊钩越过船舷为精确分界点。也就是说,吊钩越过船舷之前的所有费用,就是 FOB 计价方式所包含的费用。所以 FOB 也译作“船舷边交货价”。反过来相对于买方而方,这个价格就是在“国外港口”的交货价,故根据英文“Off shore”又译作“离岸价格” &gt;&gt;</p>
+<h4 id="2-CNF-和-CIF"><a href="#2-CNF-和-CIF" class="headerlink" title="2.CNF 和 CIF"></a>2.CNF 和 CIF</h4><p>以目的地港口(Destination Port)为基准点。CNF又称为 C&amp;F,即成本(离岸价格)加上运费。同样地,反过来相对于买方而言, 这就是抵达目的地口岸后的价格,故称为“至岸价”。CNF 再增加一个保险费 insurance 就变成了 CIF(cost, insurance, freight) 。 </p>
+<p>FOB、CNF、CIF 价格除了货值本身外,还包括商检、报关、码头、保险等杂费。既然要支付这些费用,自然也要办理这些手续。所以,这些价格术语既是计价方式,又是买卖双方责任和风险划分的依据 </p>
+<h4 id="3-佣金-Commission"><a href="#3-佣金-Commission" class="headerlink" title="3.佣金 Commission"></a>3.佣金 Commission</h4><p>国际贸易商人中有不少是公开的掮客, 替他的客户采购产品并以明示或暗中约定的方式抽取佣金。</p>
+<h4 id="4-退税"><a href="#4-退税" class="headerlink" title="4.退税"></a>4.退税</h4><p>出口人民币总成本,除了上面提到的 1~9 费用以外,还必须考虑到退税制 </p>
+<p>行业内通常会采用一个相对简单的拍片公式,直接从国内采购进来的人民币换算出美金价, 叫做“换汇成本速算法”。注意,这个“换汇成本速算法”仅适用于贸易公司或个人。 公式为: 保本报价=工厂收购价/保本换汇成本保本换汇成本=汇率×(1+退税率) </p>
+<p>但要注意,公式只是理论上的简化操作, 实务中别忘了在实际工厂收购价的基础上加上各项运杂费 运杂费不起眼,但稍不留心就会超出预算,影响你最终的实际利润。 </p>
+<p>除了上述基本价格构成以外,在实际操作中还要特别注意一些隐性的成本。 </p>
+<h2 id="三、预防成本陷阱"><a href="#三、预防成本陷阱" class="headerlink" title="三、预防成本陷阱"></a>三、预防成本陷阱</h2><h3 id="1-这些成本陷阱首先是银行费用。"><a href="#1-这些成本陷阱首先是银行费用。" class="headerlink" title="1.这些成本陷阱首先是银行费用。"></a>1.这些成本陷阱首先是<strong>银行费用</strong>。</h3><p>从国外汇进的款项, 国外银行和国内银行会从中扣除手续费。 </p>
+<h3 id="2-此外最常见的预算外费用就是码头操作。"><a href="#2-此外最常见的预算外费用就是码头操作。" class="headerlink" title="2.此外最常见的预算外费用就是码头操作。"></a>2.此外最常见的预算外费用就是<strong>码头操作</strong>。</h3><p>码头杂费名目繁多, 该由发货人还是收货人承担则模棱两可。FOB 条件下,由进口方负责订舱,CNF 和 CIF 条件下则由出口商负责订舱。接受订舱的货运公司,出于揽生意的考虑,往往只对订舱人负责,把费用转嫁到另一方。对于我们出口方而言,在操作 FOB 的时候,如果是初次合作的货运公司,有必要事先核对一下相关费用。如果发现费用分担明显不公,则与国外客户联系协商要求调整。 </p>
+<h2 id="四、报价技巧"><a href="#四、报价技巧" class="headerlink" title="四、报价技巧"></a>四、报价技巧</h2><p>报价分实盘和虚盘</p>
+<p><strong>实盘</strong>：外贸的报价有其特殊的规定。 理论上一个正式的外贸报价, 不但应有完整的价格术语表达式, 还应包括品名、价格有效时间、可供应的数量、交货时间等。这样的报价叫做“实盘”(firm offer) ,理论上具有相当的效力,一旦客户接受,报价方不可更改。 因为这样的报价几乎涵盖了合同的基本要素 </p>
+<p><strong>虚盘</strong>：不过, 出于灵活和计价还价考虑,除了初次接触想显示正规以外,实际操作中多数情况下会有意无意漏掉一些要素,使格式不完整,成为无最终效力的“虚盘”(non-firm offer) 。发虚盘可以给双方留下较多的讨价还价的余地，灵活运用虚盘,是外贸谈判的基本技巧。 </p>
+<p>报价可以是虚盘, 但到最后确认价格的时候则一定要是实盘的格式, 即价格与数量、 交货时间、货款结算方式等等捆绑在一起确认。否则,客户以大数量低价格订货,最后却迟迟不出货,我方的仓储费用和生产费用增加负担,薄利多销的初衷完全失去了意义。</p>
+<ol>
+<li>客户没有回应怎么办？</li>
+</ol>
+<p>在报价之后,如果客户没有积极回应,不妨发一个较低价格的虚盘以试探客户的想法。 如客户有兴趣了, 再调整一下出货量, 薄利多销, 也可视情形故意延长或缩短交货时间,以利于我方安排,节约交易成本,弥补降价损失。 还可以几个产品组合报价,取盈补亏,相互调剂。 </p>
+<ol start="2">
+<li>客户询盘的意图是什么？</li>
+</ol>
+<p>a) 询问一堆产品,实际上只想要其中一种或几种：</p>
+<p>反过来,客户也会试探我们。特别是在初次接触的时候,客户往往会询问一堆产品,实际上只想要其中一种或几种,这时候报价就要小心了, 除非明确数量,否则不要轻易使用搭配报价。 因为搭配报价通常不会告诉客户我们的真实意图, 而万一最后客户只要低价的不要高价的,我们就吃了哑巴亏。 </p>
+<p>b) 试探我方的经营风格和报价水分：</p>
+<p>还有一种情形,就是客户明明是行家里手,熟悉市场的,却故意询问一些到处都能买到的老款传统产品。 这时候双方很可能是在试探我方的经营风格和报价水分—-因为这些产品很容易在其他供应商那里得到报价,以作比对老产品一般利润不会高,如果我们心存侥幸,  </p>
+<h3 id="经验一-“留尾”的虚盘"><a href="#经验一-“留尾”的虚盘" class="headerlink" title="经验一:“留尾”的虚盘"></a>经验一:“留尾”的虚盘</h3><h4 id="一个初次接触的客户来询问价格-如何应对"><a href="#一个初次接触的客户来询问价格-如何应对" class="headerlink" title="一个初次接触的客户来询问价格,如何应对?"></a>一个初次接触的客户来询问价格,如何应对?</h4><p>多数情况下, 外贸报价的尺度非常灵活，不分析市场和客户情况而固守一个价位的报价往往会丧失很多成交机会。</p>
+<h5 id="不同市场报不同的价"><a href="#不同市场报不同的价" class="headerlink" title="不同市场报不同的价"></a>不同市场报不同的价</h5><p>基本的原则,一般是对欧美发达国家市场报价略高,发展中国家或落后地区报价略低。 就产品而言,则是老款式产品价低, 常规产品价位中等,新品略偏上。</p>
+<h5 id="价格高低的取舍"><a href="#价格高低的取舍" class="headerlink" title="价格高低的取舍"></a>价格高低的取舍</h5><p>对于新客户询盘,我们对客户的具体订购需求、心理价位等尚不了解,价格报低了,即使成交也利润不多;价格报高了,可能会吓跑客户错失机会。同时也不排队有竞争对手冒充客户刺探商业情报的可能。因此价格方面需谨慎对待,虚虚实实。 </p>
+<p>对初次接触的客户,最好不要用“quote”这样正规的词来报价,轻描淡写的“price”足矣。甚至不出现“price”字样亦可,成为一个“虚盘”。而虚盘的重点是一定要<u>留个尾巴来“钓”客户</u>。常见的如规定一个最低订货量,作为以后讨价还价的筹码之一; 虚盘后面补充说明,“上述价格为参考。如您所理解,根据订货量、交货时间和付款方式的不同,价格会有很大的区别，有时甚至会有高达 10%的折扣。” </p>
+<p>所谓低价,指的是接近成本价格,利润不高的报价,靠“跑量”来维持;高价则预期较高利润的价格了。 </p>
+<p>从这种“留尾巴”的方式, 就演化出两种常见的报价技巧:“<strong>低价留尾</strong>”和“<strong>高价留尾</strong>” </p>
+<h6 id="低价留尾"><a href="#低价留尾" class="headerlink" title="低价留尾"></a>低价留尾</h6><p>就是报个低价, 得规定一个比较大的订货量,甚至大大高于你所估计的客户可能的订购量也没有关系,关键是用低价勾起客户兴趣,又为将来的涨价 提供顺理成章的依据—订量不够,价格当然要贵一点。</p>
+<h6 id="高价留尾"><a href="#高价留尾" class="headerlink" title="高价留尾"></a>高价留尾</h6><p>就是报高价后,故意规定一个小的订货量(估计客户不难达到的量) ,并许诺如果超过此量,价格会有折扣。此外,表示根据付款方式的不同,可给予较大优惠云云。总之,漫天要价,但鼓励客户就地还钱。</p>
+<h5 id="用低价法还是高价法？"><a href="#用低价法还是高价法？" class="headerlink" title="用低价法还是高价法？"></a>用低价法还是高价法？</h5><p>视客户的情形而定,一般说来,可以先在网上检查一下客户的情况。</p>
+<p>如果发现客户有大规模的网站和分支机构, 或者在网上大肆散布求购信息,这样的客户最好用低价法, 因为你会有很多竞争者, 刚开始价格一高,客户理都不理睬你。</p>
+<p>反之,对那些不熟行的中间商,可以用高 价法,并且在往来信函中主动介绍“内行的”产品技术情况, 故意把情况搞复杂, 给客户一种“这个产品很有讲究,外行容易上当”的感觉,最后,争取利用客户 “花钱买个稳妥”的心态,多挣一点。 </p>
+<p><strong>保持联系</strong></p>
+<p>此外, 回复询盘的时候除价格外, 尽可能在回信中附上一些关于产品的资料, 比如包装情况、集装箱情况、产品图片等等。这样做的目的是首先给客户一个关于价格 的概念,然后通过介绍关于产品的基本情况及行业动态, 让客户强烈感觉到跟你接触无论是否成交都能够了解产品信息,“值得联系”。须知,除非是一锤子买卖, 否则初次与客户打交道,成交是第二位的,细水长流,设法激起客户“<strong>保持联系</strong>”的欲望才是最主要的。 </p>
+<p><strong>引客户说出他的目的</strong></p>
+<p>有些客户询盘的时候比较空泛,既无具体款式,又无订购数量、 目标市场等能够用来衡量及调整价格的参数。这时候不能坐着干等客户表示“明确意向”,要设法<strong>引客户说出他的目的</strong>。比如,泛泛地报个 FOB 价之后,告诉客户“请告知您所需的目的港,我很乐于折算一个 CNF 价格给您做参考”; 又或“请告知您可能的订购 量和交货时间, 我看看是否能给给您一个好价格或折扣”。这样一来, 就获知了客户的基本资料信息, 再根据这些信息有针对性地调整报价,有的放矢,促进成交。</p>
+<h3 id="经验二-变被动为主动"><a href="#经验二-变被动为主动" class="headerlink" title="经验二:变被动为主动"></a>经验二:变被动为主动</h3><h4 id="尝试着去“引导”客户和公司-促进生意的达成"><a href="#尝试着去“引导”客户和公司-促进生意的达成" class="headerlink" title="尝试着去“引导”客户和公司,促进生意的达成"></a>尝试着去“引导”客户和公司,促进生意的达成</h4><p>这种“引导”基于三个理念: </p>
+<ol>
+<li>价格是活的 </li>
+</ol>
+<p>根据订量的大小,生产期的安排,运输方式和付款方式的不同,会有很大的差别。同时,一个产品的成本构成是复杂的,某个零部件或者加工步骤改变一下,往往能够带来相当幅度的成本变动。 </p>
+<ol start="2">
+<li>客户不一定会固守其对产品的要求。 </li>
+</ol>
+<p>特别是消费类、 工艺类产品。 比如本来计划订 1000 个的,如果谈得好,客户有了信心,可能最终会增加到 5000 个。或者本来客户希望是全金属制品, 而最后可能为了获得低价, 接受类似于“外部金属而底部及内部采用树脂或塑料部件” </p>
+<ol start="3">
+<li>公司不一定会固守所谓的产品价格底线 </li>
+</ol>
+<h4 id="具体做“引导”的时候-注意几点"><a href="#具体做“引导”的时候-注意几点" class="headerlink" title="具体做“引导”的时候,注意几点"></a>具体做“引导”的时候,注意几点</h4><ol>
+<li><p>“低价”可以, 但多半要跟“量大”、 “预付款多”、 “余款及时安全”、 “交货期长”等等条件捆绑。注意, 为什么“交货期长”是个便利条件呢?因为这样可以从容安排, 作为填补生产空档之用, 此外还可以选择运费较低廉的时候交货, 或拼顺路的货, 大大节约成本。 </p>
+</li>
+<li><p>主动给客户提建议,如上面提及的零部件与加工步骤的调整建议。很多时候客户最关心的是价格, 在品质能够被客户的市场接受的前提下, 业务员如果能够主动提供工艺上的替代方案以削减价格,客户往往是很欢迎的。 </p>
+</li>
+<li><p>多与客户交流,了解客户的真实想法。比如客户还价太低的时候,侧面了解一下原因, 是客户不了解行情,不会核算,还是你的竞争对手恶意降价扰乱市场。从而有针对性处理。 </p>
+</li>
+<li><p>多与工厂生产部门交流,探讨根据不同品质要求而从工艺上进行替代调整的可能性。多寻找一些零配件供货渠道,努力削减成本。尽量多了解工厂的生产和财务 状况,既配合了生产和财务管理,又促进了低价客户的成交可能。其中区别一目了然:新手单纯传话,而好的业务员则动脑筋设计方案给客户及工厂参考,促进交 易。 &gt;&gt;</p>
+</li>
+<li><p>最后,商业情报的收信多多益善。</p>
+<p>曾有过一个失败案例:一个赫赫有名的大买家询盘,新手业务员却居然不知道对手是谁,上级经理因不知详情也没有足够重 视,当成变通客户询盘处理。结果因贪图一点利润而错失了进入这个大买家供货体系的机会。 须知, 能进入国际大买家的供货商体系非常有价值,一旦与他们有过良 好的交易记录,以后的路子就顺多。而这些大买家轻易不更换供货商的, 很多时候只是在急着补货的时候才偶尔外发询盘。 从这个意义上来说,碰到这样的良机,即 便平本也要做,牺牲一点利润,权当“买路钱”。 </p>
+</li>
+</ol>
+<p>总之,外贸报价的技巧,与钓鱼同理:既不能白白地撒饵,也不能冷冰冰甩个空鱼钩过去。  </p>
+<h1 id="第-4-日-实务篇：外贸单证的缮制与单证事故处理"><a href="#第-4-日-实务篇：外贸单证的缮制与单证事故处理" class="headerlink" title="第 4 日 实务篇：外贸单证的缮制与单证事故处理"></a>第 4 日 实务篇：外贸单证的缮制与单证事故处理</h1><h1 id="第-5-日-高手篇：信用证全攻略"><a href="#第-5-日-高手篇：信用证全攻略" class="headerlink" title="第 5 日 高手篇：信用证全攻略"></a>第 5 日 高手篇：信用证全攻略</h1><h2 id="一、外贸货款结算方式"><a href="#一、外贸货款结算方式" class="headerlink" title="一、外贸货款结算方式"></a>一、外贸货款结算方式</h2><h2 id="二、信用证实践操作详解"><a href="#二、信用证实践操作详解" class="headerlink" title="二、信用证实践操作详解"></a>二、信用证实践操作详解</h2><h2 id="三、信用证事故的处理"><a href="#三、信用证事故的处理" class="headerlink" title="三、信用证事故的处理"></a>三、信用证事故的处理</h2><h1 id="第-6-日-合作篇：与货代打交道"><a href="#第-6-日-合作篇：与货代打交道" class="headerlink" title="第 6 日 合作篇：与货代打交道"></a>第 6 日 合作篇：与货代打交道</h1><h2 id="一、找个好货代"><a href="#一、找个好货代" class="headerlink" title="一、找个好货代"></a>一、找个好货代</h2><h2 id="二、重要的提单"><a href="#二、重要的提单" class="headerlink" title="二、重要的提单"></a>二、重要的提单</h2><h2 id="三、相关的货运知识"><a href="#三、相关的货运知识" class="headerlink" title="三、相关的货运知识"></a>三、相关的货运知识</h2><h1 id="第-7-日-经验篇：外贸江湖"><a href="#第-7-日-经验篇：外贸江湖" class="headerlink" title="第 7 日 经验篇：外贸江湖"></a>第 7 日 经验篇：外贸江湖</h1><h2 id="一、话题之一-“三无”企业中-外贸新手入行如何开展工作"><a href="#一、话题之一-“三无”企业中-外贸新手入行如何开展工作" class="headerlink" title="一、话题之一:“三无”企业中,外贸新手入行如何开展工作"></a>一、话题之一:“三无”企业中,外贸新手入行如何开展工作</h2><h3 id="2个事实"><a href="#2个事实" class="headerlink" title="2个事实"></a>2个事实</h3><p>首先,无论是企业老板还是业务新手,都必须清楚两个事实: </p>
+<ol>
+<li><p>外贸公司不是工厂的敌人而是朋友。 </p>
+</li>
+<li><p>外贸市场不是一两个月时间就能开发出来的。 </p>
+</li>
+</ol>
+<p>接下来,做些必要的准备工作。一块工作是<strong>学习外贸</strong>,一块工作是<strong>熟悉产品</strong>。 </p>
+<h3 id="学习外贸"><a href="#学习外贸" class="headerlink" title="学习外贸"></a>学习外贸</h3><p>外贸学习的好方法是以单证为中心和关键点, 用单证把外贸流程各个步骤“串”起来。 通过工厂业务资料、同行交流和互联网下载等方式,把外贸常见单证如发票、 装箱单、商检、提单、产地证、汇票、受益人声明、信用证等收集范本,存底备查。对于工厂来说,产品类别相对固定 , 出口程序大同小异,做过一次全套单证,以 后照搬就是。特别是信用证,五花八门,来自欧洲、中东、 东南亚等的信用证往往各有其鲜明的地区特色和特殊条款。 有机会的话, 把不同地萄信用证选择有代表性 的存档。碰到特殊条款,记录处理方式,积累经验。 </p>
+<h3 id="熟悉产品"><a href="#熟悉产品" class="headerlink" title="熟悉产品"></a>熟悉产品</h3><p>熟悉产品知识是成功外贸业务员的基础。 越了解产品, 客户就越尊重你, 讨价还价时言语就更有分量。有时间多下车间,请教车间主任和老技术工人,条件允许的话 甚至不妨亲自操作一些生产环节。 这不但可以搞好人际关系, 更重要的是让获悉一些书本上没有的东西方。 了解产品的生产过程,容易偷工减料的环节,主要原料, 原料的来源产地,原料的品质以及因此造成的成品品质差异,品质检测的方法,技术参数,常见的品质问题及导致因素等。了解产品生产成本的构成,水电人工包装 等的均摊核算。这样,将来就可以自己估算产品价格,对价格底线心中有数。</p>
+<h3 id="人际关系"><a href="#人际关系" class="headerlink" title="人际关系"></a>人际关系</h3><p>这是一个外贸人独立开展业务的关键。 积极地结交几个朋友或拜几个老师。一个是货代,一个是商检局(如果产品属于商检范围),一个是银行的国际结算部。这三个方面是今后新手外贸工作中常常需要咨询的。有这些朋友和老师提点一下, 事半功倍。 多与你的老板或直接部门领导沟通。很多时候,老板或领导本身并不懂外贸,容易犯外行指导内行,急于求成的毛病。见到你整天坐在电脑前面忙碌,却一直没有实 际的订单,难免心生疑忌。因此,开始的时候要主支与他们交流,汇报工作,随时告知进展状况、碰到的问题和解决方法—-至少是试图解决的想法。</p>
+<p>让领导知道你在干什么,这很重要,否则辛苦却得不到肯定与支持,影响工作的情绪。 </p>
+<p>尊敬你可能碰到的前辈同行或同事。 把他们当作你学习的机会。 </p>
+<p>最后,遵守职业道德。信誉在外贸这一行非常重要。 </p>
+<h2 id="二、话题之二-样品"><a href="#二、话题之二-样品" class="headerlink" title="二、话题之二:样品"></a>二、话题之二:样品</h2><p>首先样品还是要给的。对于目标客户,更不妨主动给,所谓眼见为实,一个实物比十封长篇开发信更有说服力。这是外贸业务的必要开支。</p>
+<p>但也不能逢人就给。有三个基本的做法</p>
+<p>1.选择客户。 </p>
+<p>2.确定细节。 </p>
+<p>3.收取费用。 </p>
+<h2 id="三、话题之三-FOB-条件下的运杂费"><a href="#三、话题之三-FOB-条件下的运杂费" class="headerlink" title="三、话题之三:FOB 条件下的运杂费"></a>三、话题之三:FOB 条件下的运杂费</h2><h2 id="四、话题之四-网络信息的查询"><a href="#四、话题之四-网络信息的查询" class="headerlink" title="四、话题之四:网络信息的查询"></a>四、话题之四:网络信息的查询</h2><h2 id="五、话题之五-贸易欺诈和防范"><a href="#五、话题之五-贸易欺诈和防范" class="headerlink" title="五、话题之五:贸易欺诈和防范"></a>五、话题之五:贸易欺诈和防范</h2><p>戒贪、戒急、戒虚荣心，是生意场上最基本而永恒的防骗之道。</p>
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://leehomma.me/about">leehomma</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://leehomma.me/2020/10/11/%E5%A4%96%E8%B4%B8%E4%B8%83%E6%97%A5%E9%80%9A/">http://leehomma.me/2020/10/11/%E5%A4%96%E8%B4%B8%E4%B8%83%E6%97%A5%E9%80%9A/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  
+  <div class="nav-item-next">
+    <a href="/2020/10/11/饮食/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">饮食 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E5%8F%A5%E8%AF%9D"><span class="toc-text">三句话</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-1-%E6%97%A5-%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E5%9B%9B%E6%AD%A5%E6%95%99%E4%BD%A0%E4%B8%8A%E6%89%8B%E5%81%9A%E5%A4%96%E8%B4%B8"><span class="toc-text">第 1 日 入门篇：从零开始,四步教你上手做外贸</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%B8%80%E6%AD%A5-%E5%A4%96%E8%B4%B8%E7%BB%8F%E8%90%A5%E6%9D%83"><span class="toc-text">一、外贸第一步:外贸经营权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E9%80%89%E6%8B%A9%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E7%BB%8F%E9%94%80%E4%BA%A7%E5%93%81"><span class="toc-text">二、外贸第二步:选择受欢迎的经销产品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E8%AF%AF%E5%8C%BA"><span class="toc-text">三个误区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E4%BA%A7%E5%93%81%E5%91%A2"><span class="toc-text">如何选择产品呢?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E6%BC%AB%E8%B0%88"><span class="toc-text">经验漫谈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%B8%89%E6%AD%A5-%E7%A0%B4%E8%A7%A3%E5%A4%96%E8%B4%B8%E7%9A%84%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E7%A7%98%E5%AF%86"><span class="toc-text">三、外贸第三步:破解外贸的三个关键秘密</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E8%B4%B8%E7%89%B9%E7%82%B9%EF%BC%9A%E9%A3%8E%E9%99%A9%E5%A4%A7"><span class="toc-text">外贸特点：风险大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E7%A7%98%E5%AF%86-%E5%8D%95%E8%AF%81%E4%BA%A4%E6%98%93%E3%80%81-%E9%80%80%E7%A8%8E%E5%88%B6%E5%BA%A6%E5%92%8C%E4%BF%A1%E7%94%A8%E8%AF%81%E7%BB%93%E7%AE%97"><span class="toc-text">三个关键秘密:单证交易、 退税制度和信用证结算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E7%9A%84%E5%87%BA%E5%8F%A3%E6%93%8D%E4%BD%9C%E6%A1%88%E4%BE%8B%E6%B5%81%E7%A8%8B"><span class="toc-text">标准的出口操作案例流程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-2-%E6%97%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%EF%BC%9A%E7%BD%91%E5%95%86%E6%97%B6%E4%BB%A3-%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%80%9A%E5%A4%A9%E4%B8%8B"><span class="toc-text">第 2 日 进阶篇：网商时代,一台电脑通天下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8A%E5%AE%A3%E4%BC%A0%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81"><span class="toc-text">一、建立一个网站,在互联网上宣传你的产品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%99%BB%E9%99%86-B2B-%E5%9B%BD%E9%99%85%E8%B4%B8%E6%98%93%E5%B9%B3%E5%8F%B0-%E4%B8%BB%E5%8A%A8%E5%87%BA%E5%87%BB%E5%8F%91%E5%B8%83%E5%B9%BF%E5%91%8A"><span class="toc-text">二、登陆 B2B 国际贸易平台,主动出击发布广告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%8E%E6%92%92%E7%BD%91%E5%88%B0%E9%92%93%E9%B1%BC-%E5%9C%A8%E7%BD%91%E4%B8%8A%E7%9B%B4%E6%8E%A5%E6%89%BE%E5%AE%A2%E6%88%B7%E7%9A%84%E5%9B%9B%E5%A4%A7%E6%8B%9B%E6%95%B0"><span class="toc-text">三、从撒网到钓鱼,在网上直接找客户的四大招数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%8B%9B-%E5%85%B3%E9%94%AE%E8%AF%8D%E6%B3%95"><span class="toc-text">第一招 关键词法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%8B%9B-%E9%80%86%E5%90%91%E6%B3%95"><span class="toc-text">第二招 逆向法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%8B%9B-%E6%A8%AA%E5%90%91%E6%B3%95"><span class="toc-text">第三招 横向法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%8B%9B-%E7%BA%B5%E5%90%91%E6%B3%95"><span class="toc-text">第四招 纵向法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%80%E5%8F%91%E4%BF%A1%E2%80%94-%E6%8A%9B%E5%90%91%E5%AE%A2%E6%88%B7%E7%9A%84%E5%AA%9A%E7%9C%BC"><span class="toc-text">四、开发信—-抛向客户的媚眼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E6%88%98"><span class="toc-text">五、电子邮件战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E4%BC%A0%E7%BB%9F%E7%9A%84%E4%BA%A4%E6%98%93%E4%BC%9A%E5%8F%8A%E5%90%8E%E6%9C%9F%E7%9A%84%E7%BD%91%E4%B8%8A%E8%B7%9F%E8%BF%9B"><span class="toc-text">六、传统的交易会及后期的网上跟进</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-3-%E6%97%A5-%E6%8A%80%E5%B7%A7%E7%AF%87%EF%BC%9A%E8%AE%A8%E4%BB%B7%E8%BF%98%E4%BB%B7-%E7%AD%BE%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E5%90%88%E5%90%8C"><span class="toc-text">第 3 日 技巧篇：讨价还价,签个漂亮的合同</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AE%A9%E5%9B%BD%E9%99%85%E4%B9%B0%E5%AE%B6%E7%9B%B8%E4%BF%A1%E4%BD%A0"><span class="toc-text">一、让国际买家相信你</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%96%E8%B4%B8%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="toc-text">二、外贸商品价格的计算方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%BF%90%E8%BE%93%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">（1）运输的手续和费用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%B4%A7%E7%89%A9%E8%BF%90%E8%87%B3%E4%B8%AD%E5%9B%BD%E6%B5%B7%E6%B8%AF%E7%A0%81%E5%A4%B4%E5%87%BA%E5%8F%A3%E5%89%8D%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">1. 货物运至中国海港码头出口前的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%B4%A7%E7%89%A9%E8%BF%90%E8%87%B3%E5%A4%96%E5%9B%BD%E7%A0%81%E5%A4%B4%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">2. 货物运至外国码头的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%B4%A7%E7%89%A9%E4%BA%A4%E5%88%B0%E5%AE%A2%E6%88%B7%E6%89%8B%E4%B8%AD%E5%89%8D%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">3. 货物交到客户手中前的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%93%B6%E8%A1%8C%E6%94%B6%E5%8F%96%E7%9A%84%E7%BB%8F%E5%8A%9E%E6%89%8B%E7%BB%AD%E8%B4%B9%E3%80%82"><span class="toc-text">4. 银行收取的经办手续费。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%AE%A1%E4%BB%B7%E6%96%B9%E5%BC%8F"><span class="toc-text">（2）计价方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-FOB-Free-on-Board"><span class="toc-text">1.FOB(Free on Board)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-CNF-%E5%92%8C-CIF"><span class="toc-text">2.CNF 和 CIF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%A3%E9%87%91-Commission"><span class="toc-text">3.佣金 Commission</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%80%80%E7%A8%8E"><span class="toc-text">4.退税</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A2%84%E9%98%B2%E6%88%90%E6%9C%AC%E9%99%B7%E9%98%B1"><span class="toc-text">三、预防成本陷阱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%99%E4%BA%9B%E6%88%90%E6%9C%AC%E9%99%B7%E9%98%B1%E9%A6%96%E5%85%88%E6%98%AF%E9%93%B6%E8%A1%8C%E8%B4%B9%E7%94%A8%E3%80%82"><span class="toc-text">1.这些成本陷阱首先是银行费用。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%AD%A4%E5%A4%96%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E9%A2%84%E7%AE%97%E5%A4%96%E8%B4%B9%E7%94%A8%E5%B0%B1%E6%98%AF%E7%A0%81%E5%A4%B4%E6%93%8D%E4%BD%9C%E3%80%82"><span class="toc-text">2.此外最常见的预算外费用就是码头操作。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%A5%E4%BB%B7%E6%8A%80%E5%B7%A7"><span class="toc-text">四、报价技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E4%B8%80-%E2%80%9C%E7%95%99%E5%B0%BE%E2%80%9D%E7%9A%84%E8%99%9A%E7%9B%98"><span class="toc-text">经验一:“留尾”的虚盘</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E5%88%9D%E6%AC%A1%E6%8E%A5%E8%A7%A6%E7%9A%84%E5%AE%A2%E6%88%B7%E6%9D%A5%E8%AF%A2%E9%97%AE%E4%BB%B7%E6%A0%BC-%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9"><span class="toc-text">一个初次接触的客户来询问价格,如何应对?</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%B8%82%E5%9C%BA%E6%8A%A5%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BB%B7"><span class="toc-text">不同市场报不同的价</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%B7%E6%A0%BC%E9%AB%98%E4%BD%8E%E7%9A%84%E5%8F%96%E8%88%8D"><span class="toc-text">价格高低的取舍</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BD%8E%E4%BB%B7%E7%95%99%E5%B0%BE"><span class="toc-text">低价留尾</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%AB%98%E4%BB%B7%E7%95%99%E5%B0%BE"><span class="toc-text">高价留尾</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E4%BD%8E%E4%BB%B7%E6%B3%95%E8%BF%98%E6%98%AF%E9%AB%98%E4%BB%B7%E6%B3%95%EF%BC%9F"><span class="toc-text">用低价法还是高价法？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E4%BA%8C-%E5%8F%98%E8%A2%AB%E5%8A%A8%E4%B8%BA%E4%B8%BB%E5%8A%A8"><span class="toc-text">经验二:变被动为主动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%9D%80%E5%8E%BB%E2%80%9C%E5%BC%95%E5%AF%BC%E2%80%9D%E5%AE%A2%E6%88%B7%E5%92%8C%E5%85%AC%E5%8F%B8-%E4%BF%83%E8%BF%9B%E7%94%9F%E6%84%8F%E7%9A%84%E8%BE%BE%E6%88%90"><span class="toc-text">尝试着去“引导”客户和公司,促进生意的达成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%81%9A%E2%80%9C%E5%BC%95%E5%AF%BC%E2%80%9D%E7%9A%84%E6%97%B6%E5%80%99-%E6%B3%A8%E6%84%8F%E5%87%A0%E7%82%B9"><span class="toc-text">具体做“引导”的时候,注意几点</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-4-%E6%97%A5-%E5%AE%9E%E5%8A%A1%E7%AF%87%EF%BC%9A%E5%A4%96%E8%B4%B8%E5%8D%95%E8%AF%81%E7%9A%84%E7%BC%AE%E5%88%B6%E4%B8%8E%E5%8D%95%E8%AF%81%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86"><span class="toc-text">第 4 日 实务篇：外贸单证的缮制与单证事故处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-5-%E6%97%A5-%E9%AB%98%E6%89%8B%E7%AF%87%EF%BC%9A%E4%BF%A1%E7%94%A8%E8%AF%81%E5%85%A8%E6%94%BB%E7%95%A5"><span class="toc-text">第 5 日 高手篇：信用证全攻略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%A4%96%E8%B4%B8%E8%B4%A7%E6%AC%BE%E7%BB%93%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="toc-text">一、外贸货款结算方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BF%A1%E7%94%A8%E8%AF%81%E5%AE%9E%E8%B7%B5%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3"><span class="toc-text">二、信用证实践操作详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BF%A1%E7%94%A8%E8%AF%81%E4%BA%8B%E6%95%85%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-text">三、信用证事故的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-6-%E6%97%A5-%E5%90%88%E4%BD%9C%E7%AF%87%EF%BC%9A%E4%B8%8E%E8%B4%A7%E4%BB%A3%E6%89%93%E4%BA%A4%E9%81%93"><span class="toc-text">第 6 日 合作篇：与货代打交道</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%89%BE%E4%B8%AA%E5%A5%BD%E8%B4%A7%E4%BB%A3"><span class="toc-text">一、找个好货代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%87%8D%E8%A6%81%E7%9A%84%E6%8F%90%E5%8D%95"><span class="toc-text">二、重要的提单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B4%A7%E8%BF%90%E7%9F%A5%E8%AF%86"><span class="toc-text">三、相关的货运知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-7-%E6%97%A5-%E7%BB%8F%E9%AA%8C%E7%AF%87%EF%BC%9A%E5%A4%96%E8%B4%B8%E6%B1%9F%E6%B9%96"><span class="toc-text">第 7 日 经验篇：外贸江湖</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%B8%80-%E2%80%9C%E4%B8%89%E6%97%A0%E2%80%9D%E4%BC%81%E4%B8%9A%E4%B8%AD-%E5%A4%96%E8%B4%B8%E6%96%B0%E6%89%8B%E5%85%A5%E8%A1%8C%E5%A6%82%E4%BD%95%E5%BC%80%E5%B1%95%E5%B7%A5%E4%BD%9C"><span class="toc-text">一、话题之一:“三无”企业中,外贸新手入行如何开展工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E4%B8%AA%E4%BA%8B%E5%AE%9E"><span class="toc-text">2个事实</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%A4%96%E8%B4%B8"><span class="toc-text">学习外贸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%9F%E6%82%89%E4%BA%A7%E5%93%81"><span class="toc-text">熟悉产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB"><span class="toc-text">人际关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%BA%8C-%E6%A0%B7%E5%93%81"><span class="toc-text">二、话题之二:样品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%B8%89-FOB-%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%9A%84%E8%BF%90%E6%9D%82%E8%B4%B9"><span class="toc-text">三、话题之三:FOB 条件下的运杂费</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E5%9B%9B-%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-text">四、话题之四:网络信息的查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%BA%94-%E8%B4%B8%E6%98%93%E6%AC%BA%E8%AF%88%E5%92%8C%E9%98%B2%E8%8C%83"><span class="toc-text">五、话题之五:贸易欺诈和防范</span></a></li></ol></li></ol>
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/img/cowboy.png" class="author-img">
+
+<p class="author-name">leehomma</p>
+<p class="author-description">cool and fun</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>8</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>1</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>15</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E5%8F%A5%E8%AF%9D"><span class="toc-text">三句话</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-1-%E6%97%A5-%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E5%9B%9B%E6%AD%A5%E6%95%99%E4%BD%A0%E4%B8%8A%E6%89%8B%E5%81%9A%E5%A4%96%E8%B4%B8"><span class="toc-text">第 1 日 入门篇：从零开始,四步教你上手做外贸</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%B8%80%E6%AD%A5-%E5%A4%96%E8%B4%B8%E7%BB%8F%E8%90%A5%E6%9D%83"><span class="toc-text">一、外贸第一步:外贸经营权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E9%80%89%E6%8B%A9%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E7%BB%8F%E9%94%80%E4%BA%A7%E5%93%81"><span class="toc-text">二、外贸第二步:选择受欢迎的经销产品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E8%AF%AF%E5%8C%BA"><span class="toc-text">三个误区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E4%BA%A7%E5%93%81%E5%91%A2"><span class="toc-text">如何选择产品呢?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E6%BC%AB%E8%B0%88"><span class="toc-text">经验漫谈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%B8%89%E6%AD%A5-%E7%A0%B4%E8%A7%A3%E5%A4%96%E8%B4%B8%E7%9A%84%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E7%A7%98%E5%AF%86"><span class="toc-text">三、外贸第三步:破解外贸的三个关键秘密</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E8%B4%B8%E7%89%B9%E7%82%B9%EF%BC%9A%E9%A3%8E%E9%99%A9%E5%A4%A7"><span class="toc-text">外贸特点：风险大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E7%A7%98%E5%AF%86-%E5%8D%95%E8%AF%81%E4%BA%A4%E6%98%93%E3%80%81-%E9%80%80%E7%A8%8E%E5%88%B6%E5%BA%A6%E5%92%8C%E4%BF%A1%E7%94%A8%E8%AF%81%E7%BB%93%E7%AE%97"><span class="toc-text">三个关键秘密:单证交易、 退税制度和信用证结算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E7%9A%84%E5%87%BA%E5%8F%A3%E6%93%8D%E4%BD%9C%E6%A1%88%E4%BE%8B%E6%B5%81%E7%A8%8B"><span class="toc-text">标准的出口操作案例流程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-2-%E6%97%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%EF%BC%9A%E7%BD%91%E5%95%86%E6%97%B6%E4%BB%A3-%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%80%9A%E5%A4%A9%E4%B8%8B"><span class="toc-text">第 2 日 进阶篇：网商时代,一台电脑通天下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8A%E5%AE%A3%E4%BC%A0%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81"><span class="toc-text">一、建立一个网站,在互联网上宣传你的产品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%99%BB%E9%99%86-B2B-%E5%9B%BD%E9%99%85%E8%B4%B8%E6%98%93%E5%B9%B3%E5%8F%B0-%E4%B8%BB%E5%8A%A8%E5%87%BA%E5%87%BB%E5%8F%91%E5%B8%83%E5%B9%BF%E5%91%8A"><span class="toc-text">二、登陆 B2B 国际贸易平台,主动出击发布广告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%8E%E6%92%92%E7%BD%91%E5%88%B0%E9%92%93%E9%B1%BC-%E5%9C%A8%E7%BD%91%E4%B8%8A%E7%9B%B4%E6%8E%A5%E6%89%BE%E5%AE%A2%E6%88%B7%E7%9A%84%E5%9B%9B%E5%A4%A7%E6%8B%9B%E6%95%B0"><span class="toc-text">三、从撒网到钓鱼,在网上直接找客户的四大招数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%8B%9B-%E5%85%B3%E9%94%AE%E8%AF%8D%E6%B3%95"><span class="toc-text">第一招 关键词法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%8B%9B-%E9%80%86%E5%90%91%E6%B3%95"><span class="toc-text">第二招 逆向法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%8B%9B-%E6%A8%AA%E5%90%91%E6%B3%95"><span class="toc-text">第三招 横向法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%8B%9B-%E7%BA%B5%E5%90%91%E6%B3%95"><span class="toc-text">第四招 纵向法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%80%E5%8F%91%E4%BF%A1%E2%80%94-%E6%8A%9B%E5%90%91%E5%AE%A2%E6%88%B7%E7%9A%84%E5%AA%9A%E7%9C%BC"><span class="toc-text">四、开发信—-抛向客户的媚眼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E6%88%98"><span class="toc-text">五、电子邮件战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E4%BC%A0%E7%BB%9F%E7%9A%84%E4%BA%A4%E6%98%93%E4%BC%9A%E5%8F%8A%E5%90%8E%E6%9C%9F%E7%9A%84%E7%BD%91%E4%B8%8A%E8%B7%9F%E8%BF%9B"><span class="toc-text">六、传统的交易会及后期的网上跟进</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-3-%E6%97%A5-%E6%8A%80%E5%B7%A7%E7%AF%87%EF%BC%9A%E8%AE%A8%E4%BB%B7%E8%BF%98%E4%BB%B7-%E7%AD%BE%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E5%90%88%E5%90%8C"><span class="toc-text">第 3 日 技巧篇：讨价还价,签个漂亮的合同</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AE%A9%E5%9B%BD%E9%99%85%E4%B9%B0%E5%AE%B6%E7%9B%B8%E4%BF%A1%E4%BD%A0"><span class="toc-text">一、让国际买家相信你</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%96%E8%B4%B8%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="toc-text">二、外贸商品价格的计算方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%BF%90%E8%BE%93%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">（1）运输的手续和费用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%B4%A7%E7%89%A9%E8%BF%90%E8%87%B3%E4%B8%AD%E5%9B%BD%E6%B5%B7%E6%B8%AF%E7%A0%81%E5%A4%B4%E5%87%BA%E5%8F%A3%E5%89%8D%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">1. 货物运至中国海港码头出口前的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%B4%A7%E7%89%A9%E8%BF%90%E8%87%B3%E5%A4%96%E5%9B%BD%E7%A0%81%E5%A4%B4%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">2. 货物运至外国码头的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%B4%A7%E7%89%A9%E4%BA%A4%E5%88%B0%E5%AE%A2%E6%88%B7%E6%89%8B%E4%B8%AD%E5%89%8D%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">3. 货物交到客户手中前的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%93%B6%E8%A1%8C%E6%94%B6%E5%8F%96%E7%9A%84%E7%BB%8F%E5%8A%9E%E6%89%8B%E7%BB%AD%E8%B4%B9%E3%80%82"><span class="toc-text">4. 银行收取的经办手续费。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%AE%A1%E4%BB%B7%E6%96%B9%E5%BC%8F"><span class="toc-text">（2）计价方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-FOB-Free-on-Board"><span class="toc-text">1.FOB(Free on Board)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-CNF-%E5%92%8C-CIF"><span class="toc-text">2.CNF 和 CIF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%A3%E9%87%91-Commission"><span class="toc-text">3.佣金 Commission</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%80%80%E7%A8%8E"><span class="toc-text">4.退税</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A2%84%E9%98%B2%E6%88%90%E6%9C%AC%E9%99%B7%E9%98%B1"><span class="toc-text">三、预防成本陷阱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%99%E4%BA%9B%E6%88%90%E6%9C%AC%E9%99%B7%E9%98%B1%E9%A6%96%E5%85%88%E6%98%AF%E9%93%B6%E8%A1%8C%E8%B4%B9%E7%94%A8%E3%80%82"><span class="toc-text">1.这些成本陷阱首先是银行费用。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%AD%A4%E5%A4%96%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E9%A2%84%E7%AE%97%E5%A4%96%E8%B4%B9%E7%94%A8%E5%B0%B1%E6%98%AF%E7%A0%81%E5%A4%B4%E6%93%8D%E4%BD%9C%E3%80%82"><span class="toc-text">2.此外最常见的预算外费用就是码头操作。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%A5%E4%BB%B7%E6%8A%80%E5%B7%A7"><span class="toc-text">四、报价技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E4%B8%80-%E2%80%9C%E7%95%99%E5%B0%BE%E2%80%9D%E7%9A%84%E8%99%9A%E7%9B%98"><span class="toc-text">经验一:“留尾”的虚盘</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E5%88%9D%E6%AC%A1%E6%8E%A5%E8%A7%A6%E7%9A%84%E5%AE%A2%E6%88%B7%E6%9D%A5%E8%AF%A2%E9%97%AE%E4%BB%B7%E6%A0%BC-%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9"><span class="toc-text">一个初次接触的客户来询问价格,如何应对?</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%B8%82%E5%9C%BA%E6%8A%A5%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BB%B7"><span class="toc-text">不同市场报不同的价</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%B7%E6%A0%BC%E9%AB%98%E4%BD%8E%E7%9A%84%E5%8F%96%E8%88%8D"><span class="toc-text">价格高低的取舍</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BD%8E%E4%BB%B7%E7%95%99%E5%B0%BE"><span class="toc-text">低价留尾</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%AB%98%E4%BB%B7%E7%95%99%E5%B0%BE"><span class="toc-text">高价留尾</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E4%BD%8E%E4%BB%B7%E6%B3%95%E8%BF%98%E6%98%AF%E9%AB%98%E4%BB%B7%E6%B3%95%EF%BC%9F"><span class="toc-text">用低价法还是高价法？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E4%BA%8C-%E5%8F%98%E8%A2%AB%E5%8A%A8%E4%B8%BA%E4%B8%BB%E5%8A%A8"><span class="toc-text">经验二:变被动为主动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%9D%80%E5%8E%BB%E2%80%9C%E5%BC%95%E5%AF%BC%E2%80%9D%E5%AE%A2%E6%88%B7%E5%92%8C%E5%85%AC%E5%8F%B8-%E4%BF%83%E8%BF%9B%E7%94%9F%E6%84%8F%E7%9A%84%E8%BE%BE%E6%88%90"><span class="toc-text">尝试着去“引导”客户和公司,促进生意的达成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%81%9A%E2%80%9C%E5%BC%95%E5%AF%BC%E2%80%9D%E7%9A%84%E6%97%B6%E5%80%99-%E6%B3%A8%E6%84%8F%E5%87%A0%E7%82%B9"><span class="toc-text">具体做“引导”的时候,注意几点</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-4-%E6%97%A5-%E5%AE%9E%E5%8A%A1%E7%AF%87%EF%BC%9A%E5%A4%96%E8%B4%B8%E5%8D%95%E8%AF%81%E7%9A%84%E7%BC%AE%E5%88%B6%E4%B8%8E%E5%8D%95%E8%AF%81%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86"><span class="toc-text">第 4 日 实务篇：外贸单证的缮制与单证事故处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-5-%E6%97%A5-%E9%AB%98%E6%89%8B%E7%AF%87%EF%BC%9A%E4%BF%A1%E7%94%A8%E8%AF%81%E5%85%A8%E6%94%BB%E7%95%A5"><span class="toc-text">第 5 日 高手篇：信用证全攻略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%A4%96%E8%B4%B8%E8%B4%A7%E6%AC%BE%E7%BB%93%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="toc-text">一、外贸货款结算方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BF%A1%E7%94%A8%E8%AF%81%E5%AE%9E%E8%B7%B5%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3"><span class="toc-text">二、信用证实践操作详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BF%A1%E7%94%A8%E8%AF%81%E4%BA%8B%E6%95%85%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-text">三、信用证事故的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-6-%E6%97%A5-%E5%90%88%E4%BD%9C%E7%AF%87%EF%BC%9A%E4%B8%8E%E8%B4%A7%E4%BB%A3%E6%89%93%E4%BA%A4%E9%81%93"><span class="toc-text">第 6 日 合作篇：与货代打交道</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%89%BE%E4%B8%AA%E5%A5%BD%E8%B4%A7%E4%BB%A3"><span class="toc-text">一、找个好货代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%87%8D%E8%A6%81%E7%9A%84%E6%8F%90%E5%8D%95"><span class="toc-text">二、重要的提单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B4%A7%E8%BF%90%E7%9F%A5%E8%AF%86"><span class="toc-text">三、相关的货运知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-7-%E6%97%A5-%E7%BB%8F%E9%AA%8C%E7%AF%87%EF%BC%9A%E5%A4%96%E8%B4%B8%E6%B1%9F%E6%B9%96"><span class="toc-text">第 7 日 经验篇：外贸江湖</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%B8%80-%E2%80%9C%E4%B8%89%E6%97%A0%E2%80%9D%E4%BC%81%E4%B8%9A%E4%B8%AD-%E5%A4%96%E8%B4%B8%E6%96%B0%E6%89%8B%E5%85%A5%E8%A1%8C%E5%A6%82%E4%BD%95%E5%BC%80%E5%B1%95%E5%B7%A5%E4%BD%9C"><span class="toc-text">一、话题之一:“三无”企业中,外贸新手入行如何开展工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E4%B8%AA%E4%BA%8B%E5%AE%9E"><span class="toc-text">2个事实</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%A4%96%E8%B4%B8"><span class="toc-text">学习外贸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%9F%E6%82%89%E4%BA%A7%E5%93%81"><span class="toc-text">熟悉产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB"><span class="toc-text">人际关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%BA%8C-%E6%A0%B7%E5%93%81"><span class="toc-text">二、话题之二:样品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%B8%89-FOB-%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%9A%84%E8%BF%90%E6%9D%82%E8%B4%B9"><span class="toc-text">三、话题之三:FOB 条件下的运杂费</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E5%9B%9B-%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-text">四、话题之四:网络信息的查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%BA%94-%E8%B4%B8%E6%98%93%E6%AC%BA%E8%AF%88%E5%92%8C%E9%98%B2%E8%8C%83"><span class="toc-text">五、话题之五:贸易欺诈和防范</span></a></li></ol></li></ol>
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+      <a href="/categories/读书笔记">
+        <div class="categories-list-item">
+          读书笔记
+          <span class="categories-list-item-badge">8</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\行为" title="行为"><div class="tags-list-item">行为</div></a>
+    
+    <a href="\tags\心理" title="心理"><div class="tags-list-item">心理</div></a>
+    
+    <a href="\tags\消费" title="消费"><div class="tags-list-item">消费</div></a>
+    
+    <a href="\tags\沟通" title="沟通"><div class="tags-list-item">沟通</div></a>
+    
+    <a href="\tags\外贸" title="外贸"><div class="tags-list-item">外贸</div></a>
+    
+    <a href="\tags\模式" title="模式"><div class="tags-list-item">模式</div></a>
+    
+    <a href="\tags\零售" title="零售"><div class="tags-list-item">零售</div></a>
+    
+    <a href="\tags\营销" title="营销"><div class="tags-list-item">营销</div></a>
+    
+    <a href="\tags\投资" title="投资"><div class="tags-list-item">投资</div></a>
+    
+    <a href="\tags\储蓄" title="储蓄"><div class="tags-list-item">储蓄</div></a>
+    
+    <a href="\tags\理财" title="理财"><div class="tags-list-item">理财</div></a>
+    
+    <a href="\tags\健康" title="健康"><div class="tags-list-item">健康</div></a>
+    
+    <a href="\tags\饮食" title="饮食"><div class="tags-list-item">饮食</div></a>
+    
+    <a href="\tags\问题解决" title="问题解决"><div class="tags-list-item">问题解决</div></a>
+    
+    <a href="\tags\运营" title="运营"><div class="tags-list-item">运营</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E5%8F%A5%E8%AF%9D"><span class="toc-text">三句话</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-1-%E6%97%A5-%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E5%9B%9B%E6%AD%A5%E6%95%99%E4%BD%A0%E4%B8%8A%E6%89%8B%E5%81%9A%E5%A4%96%E8%B4%B8"><span class="toc-text">第 1 日 入门篇：从零开始,四步教你上手做外贸</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%B8%80%E6%AD%A5-%E5%A4%96%E8%B4%B8%E7%BB%8F%E8%90%A5%E6%9D%83"><span class="toc-text">一、外贸第一步:外贸经营权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E9%80%89%E6%8B%A9%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E7%BB%8F%E9%94%80%E4%BA%A7%E5%93%81"><span class="toc-text">二、外贸第二步:选择受欢迎的经销产品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E8%AF%AF%E5%8C%BA"><span class="toc-text">三个误区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E4%BA%A7%E5%93%81%E5%91%A2"><span class="toc-text">如何选择产品呢?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E6%BC%AB%E8%B0%88"><span class="toc-text">经验漫谈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A4%96%E8%B4%B8%E7%AC%AC%E4%B8%89%E6%AD%A5-%E7%A0%B4%E8%A7%A3%E5%A4%96%E8%B4%B8%E7%9A%84%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E7%A7%98%E5%AF%86"><span class="toc-text">三、外贸第三步:破解外贸的三个关键秘密</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E8%B4%B8%E7%89%B9%E7%82%B9%EF%BC%9A%E9%A3%8E%E9%99%A9%E5%A4%A7"><span class="toc-text">外贸特点：风险大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E7%A7%98%E5%AF%86-%E5%8D%95%E8%AF%81%E4%BA%A4%E6%98%93%E3%80%81-%E9%80%80%E7%A8%8E%E5%88%B6%E5%BA%A6%E5%92%8C%E4%BF%A1%E7%94%A8%E8%AF%81%E7%BB%93%E7%AE%97"><span class="toc-text">三个关键秘密:单证交易、 退税制度和信用证结算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E7%9A%84%E5%87%BA%E5%8F%A3%E6%93%8D%E4%BD%9C%E6%A1%88%E4%BE%8B%E6%B5%81%E7%A8%8B"><span class="toc-text">标准的出口操作案例流程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-2-%E6%97%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%EF%BC%9A%E7%BD%91%E5%95%86%E6%97%B6%E4%BB%A3-%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%80%9A%E5%A4%A9%E4%B8%8B"><span class="toc-text">第 2 日 进阶篇：网商时代,一台电脑通天下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8A%E5%AE%A3%E4%BC%A0%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81"><span class="toc-text">一、建立一个网站,在互联网上宣传你的产品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%99%BB%E9%99%86-B2B-%E5%9B%BD%E9%99%85%E8%B4%B8%E6%98%93%E5%B9%B3%E5%8F%B0-%E4%B8%BB%E5%8A%A8%E5%87%BA%E5%87%BB%E5%8F%91%E5%B8%83%E5%B9%BF%E5%91%8A"><span class="toc-text">二、登陆 B2B 国际贸易平台,主动出击发布广告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%8E%E6%92%92%E7%BD%91%E5%88%B0%E9%92%93%E9%B1%BC-%E5%9C%A8%E7%BD%91%E4%B8%8A%E7%9B%B4%E6%8E%A5%E6%89%BE%E5%AE%A2%E6%88%B7%E7%9A%84%E5%9B%9B%E5%A4%A7%E6%8B%9B%E6%95%B0"><span class="toc-text">三、从撒网到钓鱼,在网上直接找客户的四大招数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%8B%9B-%E5%85%B3%E9%94%AE%E8%AF%8D%E6%B3%95"><span class="toc-text">第一招 关键词法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%8B%9B-%E9%80%86%E5%90%91%E6%B3%95"><span class="toc-text">第二招 逆向法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%8B%9B-%E6%A8%AA%E5%90%91%E6%B3%95"><span class="toc-text">第三招 横向法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%8B%9B-%E7%BA%B5%E5%90%91%E6%B3%95"><span class="toc-text">第四招 纵向法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%80%E5%8F%91%E4%BF%A1%E2%80%94-%E6%8A%9B%E5%90%91%E5%AE%A2%E6%88%B7%E7%9A%84%E5%AA%9A%E7%9C%BC"><span class="toc-text">四、开发信—-抛向客户的媚眼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E6%88%98"><span class="toc-text">五、电子邮件战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E4%BC%A0%E7%BB%9F%E7%9A%84%E4%BA%A4%E6%98%93%E4%BC%9A%E5%8F%8A%E5%90%8E%E6%9C%9F%E7%9A%84%E7%BD%91%E4%B8%8A%E8%B7%9F%E8%BF%9B"><span class="toc-text">六、传统的交易会及后期的网上跟进</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-3-%E6%97%A5-%E6%8A%80%E5%B7%A7%E7%AF%87%EF%BC%9A%E8%AE%A8%E4%BB%B7%E8%BF%98%E4%BB%B7-%E7%AD%BE%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84%E5%90%88%E5%90%8C"><span class="toc-text">第 3 日 技巧篇：讨价还价,签个漂亮的合同</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AE%A9%E5%9B%BD%E9%99%85%E4%B9%B0%E5%AE%B6%E7%9B%B8%E4%BF%A1%E4%BD%A0"><span class="toc-text">一、让国际买家相信你</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%96%E8%B4%B8%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="toc-text">二、外贸商品价格的计算方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%BF%90%E8%BE%93%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">（1）运输的手续和费用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%B4%A7%E7%89%A9%E8%BF%90%E8%87%B3%E4%B8%AD%E5%9B%BD%E6%B5%B7%E6%B8%AF%E7%A0%81%E5%A4%B4%E5%87%BA%E5%8F%A3%E5%89%8D%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">1. 货物运至中国海港码头出口前的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%B4%A7%E7%89%A9%E8%BF%90%E8%87%B3%E5%A4%96%E5%9B%BD%E7%A0%81%E5%A4%B4%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">2. 货物运至外国码头的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%B4%A7%E7%89%A9%E4%BA%A4%E5%88%B0%E5%AE%A2%E6%88%B7%E6%89%8B%E4%B8%AD%E5%89%8D%E7%9A%84%E6%89%8B%E7%BB%AD%E5%92%8C%E8%B4%B9%E7%94%A8"><span class="toc-text">3. 货物交到客户手中前的手续和费用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%93%B6%E8%A1%8C%E6%94%B6%E5%8F%96%E7%9A%84%E7%BB%8F%E5%8A%9E%E6%89%8B%E7%BB%AD%E8%B4%B9%E3%80%82"><span class="toc-text">4. 银行收取的经办手续费。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%AE%A1%E4%BB%B7%E6%96%B9%E5%BC%8F"><span class="toc-text">（2）计价方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-FOB-Free-on-Board"><span class="toc-text">1.FOB(Free on Board)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-CNF-%E5%92%8C-CIF"><span class="toc-text">2.CNF 和 CIF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%A3%E9%87%91-Commission"><span class="toc-text">3.佣金 Commission</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%80%80%E7%A8%8E"><span class="toc-text">4.退税</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A2%84%E9%98%B2%E6%88%90%E6%9C%AC%E9%99%B7%E9%98%B1"><span class="toc-text">三、预防成本陷阱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%99%E4%BA%9B%E6%88%90%E6%9C%AC%E9%99%B7%E9%98%B1%E9%A6%96%E5%85%88%E6%98%AF%E9%93%B6%E8%A1%8C%E8%B4%B9%E7%94%A8%E3%80%82"><span class="toc-text">1.这些成本陷阱首先是银行费用。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%AD%A4%E5%A4%96%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E9%A2%84%E7%AE%97%E5%A4%96%E8%B4%B9%E7%94%A8%E5%B0%B1%E6%98%AF%E7%A0%81%E5%A4%B4%E6%93%8D%E4%BD%9C%E3%80%82"><span class="toc-text">2.此外最常见的预算外费用就是码头操作。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%A5%E4%BB%B7%E6%8A%80%E5%B7%A7"><span class="toc-text">四、报价技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E4%B8%80-%E2%80%9C%E7%95%99%E5%B0%BE%E2%80%9D%E7%9A%84%E8%99%9A%E7%9B%98"><span class="toc-text">经验一:“留尾”的虚盘</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E5%88%9D%E6%AC%A1%E6%8E%A5%E8%A7%A6%E7%9A%84%E5%AE%A2%E6%88%B7%E6%9D%A5%E8%AF%A2%E9%97%AE%E4%BB%B7%E6%A0%BC-%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9"><span class="toc-text">一个初次接触的客户来询问价格,如何应对?</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%B8%82%E5%9C%BA%E6%8A%A5%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BB%B7"><span class="toc-text">不同市场报不同的价</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%B7%E6%A0%BC%E9%AB%98%E4%BD%8E%E7%9A%84%E5%8F%96%E8%88%8D"><span class="toc-text">价格高低的取舍</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BD%8E%E4%BB%B7%E7%95%99%E5%B0%BE"><span class="toc-text">低价留尾</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%AB%98%E4%BB%B7%E7%95%99%E5%B0%BE"><span class="toc-text">高价留尾</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E4%BD%8E%E4%BB%B7%E6%B3%95%E8%BF%98%E6%98%AF%E9%AB%98%E4%BB%B7%E6%B3%95%EF%BC%9F"><span class="toc-text">用低价法还是高价法？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E4%BA%8C-%E5%8F%98%E8%A2%AB%E5%8A%A8%E4%B8%BA%E4%B8%BB%E5%8A%A8"><span class="toc-text">经验二:变被动为主动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%9D%80%E5%8E%BB%E2%80%9C%E5%BC%95%E5%AF%BC%E2%80%9D%E5%AE%A2%E6%88%B7%E5%92%8C%E5%85%AC%E5%8F%B8-%E4%BF%83%E8%BF%9B%E7%94%9F%E6%84%8F%E7%9A%84%E8%BE%BE%E6%88%90"><span class="toc-text">尝试着去“引导”客户和公司,促进生意的达成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%81%9A%E2%80%9C%E5%BC%95%E5%AF%BC%E2%80%9D%E7%9A%84%E6%97%B6%E5%80%99-%E6%B3%A8%E6%84%8F%E5%87%A0%E7%82%B9"><span class="toc-text">具体做“引导”的时候,注意几点</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-4-%E6%97%A5-%E5%AE%9E%E5%8A%A1%E7%AF%87%EF%BC%9A%E5%A4%96%E8%B4%B8%E5%8D%95%E8%AF%81%E7%9A%84%E7%BC%AE%E5%88%B6%E4%B8%8E%E5%8D%95%E8%AF%81%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86"><span class="toc-text">第 4 日 实务篇：外贸单证的缮制与单证事故处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-5-%E6%97%A5-%E9%AB%98%E6%89%8B%E7%AF%87%EF%BC%9A%E4%BF%A1%E7%94%A8%E8%AF%81%E5%85%A8%E6%94%BB%E7%95%A5"><span class="toc-text">第 5 日 高手篇：信用证全攻略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%A4%96%E8%B4%B8%E8%B4%A7%E6%AC%BE%E7%BB%93%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="toc-text">一、外贸货款结算方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BF%A1%E7%94%A8%E8%AF%81%E5%AE%9E%E8%B7%B5%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3"><span class="toc-text">二、信用证实践操作详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BF%A1%E7%94%A8%E8%AF%81%E4%BA%8B%E6%95%85%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-text">三、信用证事故的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-6-%E6%97%A5-%E5%90%88%E4%BD%9C%E7%AF%87%EF%BC%9A%E4%B8%8E%E8%B4%A7%E4%BB%A3%E6%89%93%E4%BA%A4%E9%81%93"><span class="toc-text">第 6 日 合作篇：与货代打交道</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%89%BE%E4%B8%AA%E5%A5%BD%E8%B4%A7%E4%BB%A3"><span class="toc-text">一、找个好货代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%87%8D%E8%A6%81%E7%9A%84%E6%8F%90%E5%8D%95"><span class="toc-text">二、重要的提单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B4%A7%E8%BF%90%E7%9F%A5%E8%AF%86"><span class="toc-text">三、相关的货运知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-7-%E6%97%A5-%E7%BB%8F%E9%AA%8C%E7%AF%87%EF%BC%9A%E5%A4%96%E8%B4%B8%E6%B1%9F%E6%B9%96"><span class="toc-text">第 7 日 经验篇：外贸江湖</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%B8%80-%E2%80%9C%E4%B8%89%E6%97%A0%E2%80%9D%E4%BC%81%E4%B8%9A%E4%B8%AD-%E5%A4%96%E8%B4%B8%E6%96%B0%E6%89%8B%E5%85%A5%E8%A1%8C%E5%A6%82%E4%BD%95%E5%BC%80%E5%B1%95%E5%B7%A5%E4%BD%9C"><span class="toc-text">一、话题之一:“三无”企业中,外贸新手入行如何开展工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E4%B8%AA%E4%BA%8B%E5%AE%9E"><span class="toc-text">2个事实</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%A4%96%E8%B4%B8"><span class="toc-text">学习外贸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%9F%E6%82%89%E4%BA%A7%E5%93%81"><span class="toc-text">熟悉产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB"><span class="toc-text">人际关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%BA%8C-%E6%A0%B7%E5%93%81"><span class="toc-text">二、话题之二:样品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%B8%89-FOB-%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%9A%84%E8%BF%90%E6%9D%82%E8%B4%B9"><span class="toc-text">三、话题之三:FOB 条件下的运杂费</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E5%9B%9B-%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-text">四、话题之四:网络信息的查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AF%9D%E9%A2%98%E4%B9%8B%E4%BA%94-%E8%B4%B8%E6%98%93%E6%AC%BA%E8%AF%88%E5%92%8C%E9%98%B2%E8%8C%83"><span class="toc-text">五、话题之五:贸易欺诈和防范</span></a></li></ol></li></ol>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-10-11</div>
+        <a href="/2020/10/11/外贸七日通/"><div class="recent-posts-item-content">外贸七日通</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-10-11</div>
+        <a href="/2020/10/11/饮食/"><div class="recent-posts-item-content">饮食</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-09-20</div>
+        <a href="/2020/09/20/银座妈妈桑说话术/"><div class="recent-posts-item-content">银座妈妈桑说话术</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-09-19</div>
+        <a href="/2020/09/19/一枚硬币的智慧/"><div class="recent-posts-item-content">一枚硬币的智慧</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2020
+        </span>
+        <a href="/" class="footer-link">leehomma的博客 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>
